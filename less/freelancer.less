@@ -155,7 +155,17 @@ header {
 
 .navbar-default,
 .navbar-inverse {
+  background: #D12828;
 	border: none;
+
+  .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    color: @brand-success;
+  }
+}
+
+.nav > li {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 section {
@@ -169,6 +179,20 @@ section {
 section.success {
 	background: @brand-success;
 	color: white;
+
+    a,
+    a:hover,
+    a:focus,
+    a:active,
+    a.active {
+      color: white;
+      outline: none;
+    }
+}
+
+section.white-sec {
+  background: white;
+  color: @brand-success;
 
     a,
     a:hover,
@@ -191,43 +215,15 @@ section.success {
 
 #portfolio {
     .portfolio-item {
-        margin: 0 0 15px;
+        margin: 10px 0 15px;
+        padding: 15px;
         right: 0;
-        .portfolio-link {
-            display: block;
-            position: relative;
-            max-width: 400px;
-            margin: 0 auto;
-            .caption {
-                background: fade(@brand-success, 90%);
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                opacity: 0;
-                transition: all ease 0.5s;
-                -webkit-transition: all ease 0.5s;
-                -moz-transition: all ease 0.5s;
-                &:hover {
-                    opacity: 1;
-                }
-                .caption-content {
-                    position: absolute;
-                    width: 100%;
-                    height: 20px;
-                    font-size: 20px;
-                    text-align: center;
-                    top: 50%;
-                    margin-top: -12px;
-                    color: white;
-                    i {
-                        margin-top: -12px;
-                    }
-                    h3,
-                    h4 {
-                        margin: 0;
-                    }
-                }
-            }
+        text-align: center;
+            height: 200px;
+
+        h2, h3 {
+          width: 100%;
+          display: block;
         }
     }
     * {
@@ -247,15 +243,15 @@ section.success {
 	color: white;
 	font-size: 20px;
 	border: solid 2px white;
-	background: transparent;
+	background: #D12828;
 	transition: all 0.3s ease-in-out;
 	margin-top: 15px;
 	&:hover,
 	&:focus,
 	&:active,
 	&.active {
-		color: @brand-success;
-		background: white;
+		color: white;
+		background: #D63636;
 		border: solid 2px white;
 	}
 }
@@ -318,20 +314,22 @@ form .row:first-child .floating-label-form-group {
 }
 
 footer {
-	color: white;
+  color: white;
+	background: white;
 	h3 {
 		margin-bottom: 30px;
 	}
 	.footer-above {
 		padding-top: 50px;
-		background-color: @brand-primary;
+		background-color: darken(@brand-primary, 5%);
 	}
 	.footer-col {
 		margin-bottom: 50px;
 	}
 	.footer-below {
 		padding: 25px 0;
-		background-color: darken(@brand-primary, 5%);
+		background-color: white;
+    color: @brand-success;
 	}
 }
 
