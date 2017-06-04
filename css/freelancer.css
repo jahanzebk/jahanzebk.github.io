@@ -165,6 +165,15 @@ section.success a.active {
   color: white;
   outline: none;
 }
+section.success .email-link {
+  color: #D12828;
+}
+section.success .email-link:hover,
+section.success .email-link:focus,
+section.success .email-link:active,
+section.success .email-link.active {
+  color: #D63636;
+}
 section.white-sec {
   background: white;
   color: #020202;
